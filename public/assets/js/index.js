@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 
-const notes = require('./routes/notes.js');
+// const notes = require('./public/routes/notes.js');
 
 const PORT = 3001;
 const app = express();
