@@ -1,22 +1,16 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "## Your Task",
+  "description": "",
   "main": "server.js",
   "scripts": {
+    "start": "npm run build && cd server && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/flammtaro/note-taker.git"
-  },
-  "bugs": {
-    "url": "https://github.com/flammtaro/note-taker/issues"
-  },
-  "homepage": "https://github.com/flammtaro/note-taker#readme"
+    "express": "^4.16.4",
+    "uuid": "^8.3.2"
+  }
 }

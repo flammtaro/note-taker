@@ -1,11 +1,3 @@
-const express = require('express');
-const fs = require('fs');
-
-// const notes = require('./public/routes/notes.js');
-
-const PORT = 3001;
-const app = express();
-
 let noteTitle;
 let noteText;
 let saveNoteBtn;
