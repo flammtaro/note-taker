@@ -4,6 +4,7 @@ let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
+//Selects the listed consts if the Notes page is being rendered
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
@@ -33,6 +34,7 @@ const getNotes = () =>
     },
   });
 
+  //
 const saveNote = (note) =>
   fetch('/api/notes', {
     method: 'POST',
@@ -108,6 +110,7 @@ const handleNewNoteView = (e) => {
   renderActiveNote();
 };
 
+// Renders the save button possible
 const handleRenderSaveBtn = () => {
   if (!noteTitle.value.trim() || !noteText.value.trim()) {
     hide(saveNoteBtn);
@@ -154,6 +157,7 @@ const renderNoteList = async (notes) => {
     return liEl;
   };
 
+  //Prevents notes with no length of text in them from being saved
   if (jsonNotes.length === 0) {
     noteListItems.push(createLi('No saved Notes', false));
   }
